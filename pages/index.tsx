@@ -1,14 +1,6 @@
 import { Box } from "@chakra-ui/layout";
 import React, { useState } from "react";
-import {
-  Button,
-  Flex,
-  Heading,
-  IconButton,
-  Image,
-  Link,
-  VStack,
-} from "@chakra-ui/react";
+import { Flex, Heading, Image } from "@chakra-ui/react";
 import { Grid, GridItem } from "@chakra-ui/react";
 import { FaInfoCircle, FaPaintRoller, FaPrint, FaStamp } from "react-icons/fa";
 import {
@@ -18,11 +10,13 @@ import {
   GiScrew,
   GiHandSaw,
 } from "react-icons/gi";
-import { GoKey, GoLightBulb, GoPaintcan } from "react-icons/go";
+import { GoKey, GoPaintcan } from "react-icons/go";
 import { RiKnifeLine, RiLightbulbLine, RiScissors2Fill } from "react-icons/ri";
+import Link from "next/link";
+import BackgroundLayout from "../layouts/BackgroundLayout";
 
 const Home = () => {
-  const [hover, setHover] = useState(2);
+  const [hover, setHover] = useState(0);
 
   return (
     <Flex
@@ -64,10 +58,10 @@ const Home = () => {
               w="100%"
               justifyContent="center"
               color="gray.200"
-              mt="-8"
+              mt="-4"
               size="2xl"
             >
-              <i>Istraži ponudu po na našem tlocrtu</i>
+              <i>Istraži ponudu prema našem tlocrtu:</i>
             </Heading>
           )}
           {hover === 1 && (
@@ -78,7 +72,7 @@ const Home = () => {
                 w="100%"
                 justifyContent="center"
                 color="white"
-                mt="-10"
+                mt="-8"
                 size="2xl"
                 textDecoration="underline"
                 textDecorationColor="teal.500"
@@ -86,7 +80,6 @@ const Home = () => {
                 Graviranje
               </Heading>
               <GridItem
-                as={Link}
                 gridColumnStart={3}
                 rowSpan={2}
                 colSpan={1}
@@ -113,15 +106,14 @@ const Home = () => {
                 w="100%"
                 justifyContent="center"
                 color="white"
-                mt="-10"
+                mt="-8"
                 size="2xl"
                 textDecoration="underline"
                 textDecorationColor="purple.500"
               >
-                Informacije
+                Kontakt
               </Heading>
               <GridItem
-                as={Link}
                 gridColumnStart={5}
                 rowSpan={1}
                 colSpan={1}
@@ -148,7 +140,7 @@ const Home = () => {
                 w="100%"
                 justifyContent="center"
                 color="white"
-                mt="-10"
+                mt="-8"
                 size="2xl"
                 textDecoration="underline"
                 textDecorationColor="orange.500"
@@ -156,7 +148,6 @@ const Home = () => {
                 Miješanje boja
               </Heading>
               <GridItem
-                as={Link}
                 gridColumnStart={6}
                 rowSpan={1}
                 colSpan={1}
@@ -183,15 +174,14 @@ const Home = () => {
                 w="100%"
                 justifyContent="center"
                 color="white"
-                mt="-10"
+                mt="-8"
                 size="2xl"
                 textDecoration="underline"
                 textDecorationColor="orange.500"
               >
-                Kemoboja
+                Boje i lakovi
               </Heading>
               <GridItem
-                as={Link}
                 gridColumnStart={5}
                 rowSpan={1}
                 colSpan={2}
@@ -216,7 +206,7 @@ const Home = () => {
                 w="100%"
                 justifyContent="center"
                 color="white"
-                mt="-10"
+                mt="-8"
                 size="2xl"
                 textDecoration="underline"
                 textDecorationColor="gray.500"
@@ -224,7 +214,6 @@ const Home = () => {
                 Brusiona i izrada ključeva
               </Heading>
               <GridItem
-                as={Link}
                 gridColumnStart={7}
                 rowSpan={1}
                 gridRowStart={1}
@@ -247,7 +236,6 @@ const Home = () => {
               </GridItem>
 
               <GridItem
-                as={Link}
                 gridColumnStart={10}
                 gridRowStart={2}
                 rowSpan={1}
@@ -278,7 +266,7 @@ const Home = () => {
                 w="100%"
                 justifyContent="center"
                 color="white"
-                mt="-10"
+                mt="-8"
                 size="2xl"
                 textDecoration="underline"
                 textDecorationColor="blue.500"
@@ -286,7 +274,6 @@ const Home = () => {
                 Željeznarija
               </Heading>
               <GridItem
-                as={Link}
                 gridColumnStart={7}
                 gridRowStart={4}
                 rowSpan={1}
@@ -302,7 +289,6 @@ const Home = () => {
               </GridItem>
 
               <GridItem
-                as={Link}
                 gridColumnStart={10}
                 gridRowStart={3}
                 rowSpan={1}
@@ -320,81 +306,86 @@ const Home = () => {
               </GridItem>
             </>
           )}
-          <GridItem
-            as={Link}
-            gridColumnStart={4}
-            gridRowStart={2}
-            rowSpan={2}
-            colSpan={1}
-            bg="teal.500"
-            onMouseEnter={() => setHover(1)}
-            onMouseLeave={() => setHover(0)}
-            _hover={{ backgroundColor: "teal.400" }}
-            _active={{ backgroundColor: "teal.500" }}
-          />
-          <GridItem
-            as={Link}
-            gridColumnStart={5}
-            gridRowStart={2}
-            rowSpan={1}
-            colSpan={1}
-            bg="purple.500"
-            onMouseEnter={() => setHover(2)}
-            onMouseLeave={() => setHover(0)}
-            _hover={{ backgroundColor: "purple.400" }}
-            _active={{ backgroundColor: "purple.500" }}
-          />
-          <GridItem
-            as={Link}
-            gridColumnStart={6}
-            gridRowStart={2}
-            rowSpan={1}
-            colSpan={1}
-            bg="orange.500"
-            onMouseEnter={() => setHover(3)}
-            onMouseLeave={() => setHover(0)}
-            _hover={{ backgroundColor: "orange.400" }}
-            _active={{ backgroundColor: "orange.500" }}
-          />
-
-          <GridItem
-            as={Link}
-            gridColumnStart={5}
-            gridRowStart={3}
-            rowSpan={1}
-            colSpan={2}
-            bg="orange.500"
-            gridRowGap="0"
-            gridColumnGap="0"
-            onMouseEnter={() => setHover(4)}
-            onMouseLeave={() => setHover(0)}
-            _hover={{ backgroundColor: "orange.400" }}
-            _active={{ backgroundColor: "orange.500" }}
-          />
-          <GridItem
-            as={Link}
-            gridColumnStart={7}
-            gridRowStart={2}
-            rowSpan={1}
-            colSpan={3}
-            bg="gray.500"
-            onMouseEnter={() => setHover(5)}
-            onMouseLeave={() => setHover(0)}
-            _hover={{ backgroundColor: "gray.400" }}
-            _active={{ backgroundColor: "gray.500" }}
-          />
-          <GridItem
-            as={Link}
-            gridColumnStart={7}
-            gridRowStart={3}
-            rowSpan={1}
-            colSpan={3}
-            bg="blue.500"
-            onMouseEnter={() => setHover(6)}
-            onMouseLeave={() => setHover(0)}
-            _hover={{ backgroundColor: "blue.400" }}
-            _active={{ backgroundColor: "blue.500" }}
-          />
+          <Link href="/graviranje">
+            <GridItem
+              gridColumnStart={4}
+              gridRowStart={2}
+              rowSpan={2}
+              colSpan={1}
+              bg="teal.500"
+              onMouseEnter={() => setHover(1)}
+              onMouseLeave={() => setHover(0)}
+              _hover={{ backgroundColor: "teal.400", cursor: "pointer" }}
+              _active={{ backgroundColor: "teal.500" }}
+            />
+          </Link>
+          <Link href="/kontakt">
+            <GridItem
+              gridColumnStart={5}
+              gridRowStart={2}
+              rowSpan={1}
+              colSpan={1}
+              bg="purple.500"
+              onMouseEnter={() => setHover(2)}
+              onMouseLeave={() => setHover(0)}
+              _hover={{ backgroundColor: "purple.400", cursor: "pointer" }}
+              _active={{ backgroundColor: "purple.500" }}
+            />
+          </Link>
+          <Link href="/mijesanje-boja">
+            <GridItem
+              gridColumnStart={6}
+              gridRowStart={2}
+              rowSpan={1}
+              colSpan={1}
+              bg="orange.500"
+              onMouseEnter={() => setHover(3)}
+              onMouseLeave={() => setHover(0)}
+              _hover={{ backgroundColor: "orange.400", cursor: "pointer" }}
+              _active={{ backgroundColor: "orange.500" }}
+            />
+          </Link>
+          <Link href="/boje-i-lakovi">
+            <GridItem
+              gridColumnStart={5}
+              gridRowStart={3}
+              rowSpan={1}
+              colSpan={2}
+              bg="orange.500"
+              gridRowGap="0"
+              gridColumnGap="0"
+              onMouseEnter={() => setHover(4)}
+              onMouseLeave={() => setHover(0)}
+              _hover={{ backgroundColor: "orange.400", cursor: "pointer" }}
+              _active={{ backgroundColor: "orange.500" }}
+            />
+          </Link>
+          <Link href="/brusiona">
+            <GridItem
+              gridColumnStart={7}
+              gridRowStart={2}
+              rowSpan={1}
+              colSpan={3}
+              bg="gray.500"
+              onMouseEnter={() => setHover(5)}
+              onMouseLeave={() => setHover(0)}
+              _hover={{ backgroundColor: "gray.400", cursor: "pointer" }}
+              _active={{ backgroundColor: "gray.500" }}
+            />
+          </Link>
+          <Link href="/zeljeznarija">
+            <GridItem
+              gridColumnStart={7}
+              gridRowStart={3}
+              rowSpan={1}
+              colSpan={3}
+              bg="blue.500"
+              onMouseEnter={() => setHover(6)}
+              onMouseLeave={() => setHover(0)}
+              _hover={{ backgroundColor: "blue.400", cursor: "pointer" }}
+              _active={{ backgroundColor: "blue.500" }}
+            />
+          </Link>
         </Grid>
       </Box>
     </Flex>
