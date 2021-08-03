@@ -4,19 +4,8 @@ import BackgroundLayout from "../layouts/BackgroundLayout";
 
 const MijesanjeBoja = () => {
   return (
-    <BackgroundLayout page={3}>
-      <>
-        <Heading
-          display="flex"
-          w="100%"
-          justifyContent="center"
-          color="white"
-          size="4xl"
-          p="6"
-        >
-          Mijesanje boja
-        </Heading>
-      </>
+    <BackgroundLayout page={3} title="Miješanje boja">
+      <></>
     </BackgroundLayout>
   );
 };

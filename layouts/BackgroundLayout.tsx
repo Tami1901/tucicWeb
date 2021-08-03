@@ -1,42 +1,67 @@
-import { Box, Flex, Grid, GridItem, Image } from "@chakra-ui/react";
+import {
+  Box,
+  Flex,
+  Grid,
+  GridItem,
+  Heading,
+  Image,
+  VStack,
+} from "@chakra-ui/react";
 import React, { useState } from "react";
 import Link from "next/link";
 import { useLocation } from "react-router-dom";
 
-const BackgroundLayout = ({ page, children }) => {
+const BackgroundLayout = ({ page, title, children }) => {
   const [hover, setHover] = useState(0);
   return (
     <Flex
       direction="column"
       backgroundColor="gray.900"
       display="flex"
-      w="100vw"
+      w="100%"
       h="100vh"
+      overflowY="scroll"
       pos="relative"
     >
-      <Box width="16%" m="4" display="flex" position="fixed">
+      <Flex w="100%" pb="5" backgroundColor="gray.900" shadow="2xl">
         <Link href="/">
-          <Image
-            src="tucic-logo.svg"
-            alt="logo"
+          <Box
+            width="16%"
+            m="6"
+            display="flex"
+            position="absolute"
             _hover={{ cursor: "pointer" }}
-          />
+          >
+            <Image src="tucic-logo.svg" alt="logo" />
+          </Box>
         </Link>
-      </Box>
+        <Heading
+          display="flex"
+          w="100%"
+          justifyContent="center"
+          color="white"
+          size="4xl"
+          p="6"
+        >
+          {title}
+        </Heading>
+      </Flex>
 
       {children}
 
       <Box
-        width="16%"
-        right="0"
+        width="16em"
+        height="10em"
         display="flex"
-        position="absolute"
         color="white"
+        position="absolute"
+        right="8"
+        flexDirection="column"
       >
         <Grid
-          h="10em"
-          w="40em"
-          templateRows="repeat(4, 1fr)"
+          h="5em"
+          w="16em"
+          templateRows="repeat(2, 1fr)"
           templateColumns="repeat(6, 1fr)"
           gap={1}
           m="4"
@@ -143,6 +168,30 @@ const BackgroundLayout = ({ page, children }) => {
             />
           </Link>
         </Grid>
+
+        {hover !== 0 && (
+          <Heading
+            display="flex"
+            color="white"
+            width="100%"
+            justifyContent="center"
+            size="md"
+          >
+            {hover === 1
+              ? "Graviranje"
+              : hover === 2
+              ? "Kontakt"
+              : hover === 3
+              ? "Mijesanje boja"
+              : hover === 4
+              ? "Boje i lakovi"
+              : hover === 5
+              ? "Brusiona"
+              : hover === 6
+              ? "Željeznarija"
+              : "nista"}
+          </Heading>
+        )}
       </Box>
     </Flex>
   );

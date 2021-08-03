@@ -4,19 +4,8 @@ import BackgroundLayout from "../layouts/BackgroundLayout";
 
 const BojeILakovi = () => {
   return (
-    <BackgroundLayout page={4}>
-      <>
-        <Heading
-          display="flex"
-          w="100%"
-          justifyContent="center"
-          color="white"
-          size="4xl"
-          p="6"
-        >
-          Boje i lakovi
-        </Heading>
-      </>
+    <BackgroundLayout page={4} title="Boje i lakovi">
+      <></>
     </BackgroundLayout>
   );
 };
