@@ -56,71 +56,90 @@ const BackgroundLayout = ({ page, children }) => {
               _active={page !== 1 && { backgroundColor: "teal.500" }}
             />
           </Link>
-          <Link href="/graviranje">
+          <Link href="/kontakt">
             <GridItem
               gridColumnStart={2}
               gridRowStart={1}
               rowSpan={1}
               colSpan={1}
-              bg="purple.500"
+              bg={page === 2 ? "purple.100" : "purple.500"}
               onMouseEnter={() => setHover(2)}
               onMouseLeave={() => setHover(0)}
-              _hover={{ backgroundColor: "purple.400", cursor: "pointer" }}
-              _active={{ backgroundColor: "purple.500" }}
+              _hover={
+                page !== 2 && {
+                  backgroundColor: "purple.400",
+                  cursor: "pointer",
+                }
+              }
+              _active={page !== 2 && { backgroundColor: "purple.500" }}
             />
           </Link>
-          <Link href="/graviranje">
+          <Link href="/mijesanje-boja">
             <GridItem
               gridColumnStart={3}
               gridRowStart={1}
               rowSpan={1}
               colSpan={1}
-              bg="orange.500"
+              bg={page === 3 ? "orange.100" : "orange.500"}
               onMouseEnter={() => setHover(3)}
               onMouseLeave={() => setHover(0)}
-              _hover={{ backgroundColor: "orange.400", cursor: "pointer" }}
-              _active={{ backgroundColor: "orange.500" }}
+              _hover={
+                page !== 3 && {
+                  backgroundColor: "orange.400",
+                  cursor: "pointer",
+                }
+              }
+              _active={page !== 3 && { backgroundColor: "orange.500" }}
             />
           </Link>
-          <Link href="/graviranje">
+          <Link href="/boje-i-lakovi">
             <GridItem
               gridColumnStart={2}
               gridRowStart={2}
               rowSpan={1}
               colSpan={2}
-              bg="orange.500"
+              bg={page === 4 ? "orange.100" : "orange.500"}
               gridRowGap="0"
               gridColumnGap="0"
               onMouseEnter={() => setHover(4)}
               onMouseLeave={() => setHover(0)}
-              _hover={{ backgroundColor: "orange.400", cursor: "pointer" }}
-              _active={{ backgroundColor: "orange.500" }}
+              _hover={
+                page !== 4 && {
+                  backgroundColor: "orange.400",
+                  cursor: "pointer",
+                }
+              }
+              _active={page !== 4 && { backgroundColor: "orange.500" }}
             />
           </Link>
-          <Link href="/graviranje">
+          <Link href="/brusiona">
             <GridItem
               gridColumnStart={4}
               gridRowStart={1}
               rowSpan={1}
               colSpan={3}
-              bg="gray.500"
+              bg={page === 5 ? "gray.100" : "gray.500"}
               onMouseEnter={() => setHover(5)}
               onMouseLeave={() => setHover(0)}
-              _hover={{ backgroundColor: "gray.400", cursor: "pointer" }}
-              _active={{ backgroundColor: "gray.500" }}
+              _hover={
+                page !== 5 && { backgroundColor: "gray.400", cursor: "pointer" }
+              }
+              _active={page !== 5 && { backgroundColor: "gray.500" }}
             />
           </Link>
-          <Link href="/graviranje">
+          <Link href="/zeljeznarija">
             <GridItem
               gridColumnStart={4}
               gridRowStart={2}
               rowSpan={1}
               colSpan={3}
-              bg="blue.500"
+              bg={page === 6 ? "blue.100" : "blue.500"}
               onMouseEnter={() => setHover(6)}
               onMouseLeave={() => setHover(0)}
-              _hover={{ backgroundColor: "blue.400", cursor: "pointer" }}
-              _active={{ backgroundColor: "blue.500" }}
+              _hover={
+                page !== 6 && { backgroundColor: "blue.400", cursor: "pointer" }
+              }
+              _active={page !== 6 && { backgroundColor: "blue.500" }}
             />
           </Link>
         </Grid>

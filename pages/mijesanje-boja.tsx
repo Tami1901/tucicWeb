@@ -4,7 +4,7 @@ import BackgroundLayout from "../layouts/BackgroundLayout";
 
 const MijesanjeBoja = () => {
   return (
-    <BackgroundLayout page={1}>
+    <BackgroundLayout page={3}>
       <>
         <Heading
           display="flex"

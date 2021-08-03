@@ -4,7 +4,7 @@ import BackgroundLayout from "../layouts/BackgroundLayout";
 
 const BojeILakovi = () => {
   return (
-    <BackgroundLayout page={1}>
+    <BackgroundLayout page={4}>
       <>
         <Heading
           display="flex"

@@ -4,7 +4,7 @@ import BackgroundLayout from "../layouts/BackgroundLayout";
 
 const Kontakt = () => {
   return (
-    <BackgroundLayout page={1}>
+    <BackgroundLayout page={2}>
       <>
         <Heading
           display="flex"

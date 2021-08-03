@@ -4,7 +4,7 @@ import BackgroundLayout from "../layouts/BackgroundLayout";
 
 const Brusiona = () => {
   return (
-    <BackgroundLayout page={1}>
+    <BackgroundLayout page={5}>
       <>
         <Heading
           display="flex"

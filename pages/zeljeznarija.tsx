@@ -4,7 +4,7 @@ import BackgroundLayout from "../layouts/BackgroundLayout";
 
 const Željeznarija = () => {
   return (
-    <BackgroundLayout page={1}>
+    <BackgroundLayout page={6}>
       <>
         <Heading
           display="flex"
