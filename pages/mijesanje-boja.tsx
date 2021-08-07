@@ -1,13 +1,8 @@
-import { Box, Heading, Image } from "@chakra-ui/react";
-import React, { useState } from "react";
-import BackgroundLayout from "../layouts/BackgroundLayout";
+import { Heading } from "@chakra-ui/react";
+import React from "react";
 
 const MijesanjeBoja = () => {
-  return (
-    <BackgroundLayout page={3} title="Miješanje boja">
-      <></>
-    </BackgroundLayout>
-  );
+  return <Heading>Brusiona</Heading>;
 };
 
 export default MijesanjeBoja;

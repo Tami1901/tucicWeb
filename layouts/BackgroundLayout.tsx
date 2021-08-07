@@ -1,15 +1,6 @@
-import {
-  Box,
-  Flex,
-  Grid,
-  GridItem,
-  Heading,
-  Image,
-  VStack,
-} from "@chakra-ui/react";
+import { Box, Flex, Grid, GridItem, Heading, Image } from "@chakra-ui/react";
 import React, { useState } from "react";
 import Link from "next/link";
-import { useLocation } from "react-router-dom";
 
 const BackgroundLayout = ({ page, title, children }) => {
   const [hover, setHover] = useState(0);
